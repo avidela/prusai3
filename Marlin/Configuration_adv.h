@@ -27,8 +27,8 @@
    * degrees, the machine is halted, requiring a hard reset. This test restarts with any M104/M109,
    * but only if the current temperature is far enough below the target for a reliable test.
    */
-  #define WATCH_TEMP_PERIOD 16                // Seconds
-  #define WATCH_TEMP_INCREASE 4               // Degrees Celsius
+  #define WATCH_TEMP_PERIOD 200//16                // Seconds
+  #define WATCH_TEMP_INCREASE 1//4               // Degrees Celsius
 #endif
 
 #if ENABLED(THERMAL_PROTECTION_BED)
