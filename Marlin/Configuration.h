@@ -273,7 +273,7 @@ Here are some standard links for getting your machine calibrated:
 
 //this prevents dangerous Extruder moves, i.e. if the temperature is under the limit
 //can be software-disabled for whatever purposes by 
-#define PREVENT_DANGEROUS_EXTRUDE
+//#define PREVENT_DANGEROUS_EXTRUDE
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
 #define PREVENT_LENGTHY_EXTRUDE
 
@@ -589,7 +589,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {4.59016393442623,4.912280701754386,378.3783783783784,500}  // default steps per unit for Ultimaker
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {4.59016393442623,4.912280701754386,378.3783783783784,95.69377990430622}  // default steps per unit for Ultimaker
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 4, 45}//{300, 300, 5, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {450,450,100,10000}//{3000,3000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
