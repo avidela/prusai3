@@ -173,10 +173,10 @@ Here are some standard links for getting your machine calibrated:
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 230
-#define HEATER_1_MAXTEMP 230
-#define HEATER_2_MAXTEMP 230
-#define HEATER_3_MAXTEMP 230
+#define HEATER_0_MAXTEMP 240
+#define HEATER_1_MAXTEMP 240
+#define HEATER_2_MAXTEMP 240
+#define HEATER_3_MAXTEMP 240
 #define BED_MAXTEMP 120
 
 // If your bed has low resistance e.g. .6 ohm and throws the fuse you can duty cycle it to reduce the
@@ -209,10 +209,10 @@ Here are some standard links for getting your machine calibrated:
   #define K1 0.95 //smoothing factor within the PID
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-  // Ultimaker
-  #define  DEFAULT_Kp 22.2
-  #define  DEFAULT_Ki 1.08
-  #define  DEFAULT_Kd 114
+  // Ultimaker - DEFAULT
+  //#define  DEFAULT_Kp 22.2
+  //#define  DEFAULT_Ki 1.08
+  //#define  DEFAULT_Kd 114
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
@@ -223,6 +223,10 @@ Here are some standard links for getting your machine calibrated:
   //#define  DEFAULT_Kp 63.0
   //#define  DEFAULT_Ki 2.25
   //#define  DEFAULT_Kd 440
+
+  #define  DEFAULT_Kp 21.79
+  #define  DEFAULT_Ki 1.52
+  #define  DEFAULT_Kd 78.20
 
 #endif // PIDTEMP
 
