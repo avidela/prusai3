@@ -373,7 +373,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true 
+#define INVERT_X_DIR false
 #define INVERT_Y_DIR true  
 #define INVERT_Z_DIR true 
 
@@ -589,21 +589,22 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
  */
 
 //#define HOMING_FEEDRATE {50*60, 50*60, 4*60, 0}  // set the homing speeds (mm/min)
-#define HOMING_FEEDRATE {50*60, 50*60, 4*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {50*60, 50*60, 1*60, 0}  // set the homing speeds (mm/min)
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {4.59016393442623,4.912280701754386,378.3783783783784,95.69377990430622}  // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {200, 200, 4, 45}//{300, 300, 5, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {450,450,100,10000}//{3000,3000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {4.59016393442623,4.912280701754386,378.3783783783784,95.69377990430622}  // default steps per unit for Ultimaker
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {5, 5, 378, 96}  // default steps per unit for Ultimaker
+#define DEFAULT_MAX_FEEDRATE          {200, 200, 1, 45}//{300, 300, 5, 25}    // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {400,400,10,10000}//{3000,3000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          450//3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  450//3000    // E acceleration in mm/s^2 for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   200//3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
+#define DEFAULT_ACCELERATION          100//3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  100//3000    // E acceleration in mm/s^2 for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   100//3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK               10// 20.0    // (mm/sec)
-#define DEFAULT_ZJERK               0.4 // 0.4     // (mm/sec)
+#define DEFAULT_XYJERK               5// 20.0    // (mm/sec)
+#define DEFAULT_ZJERK               0.1 // 0.4     // (mm/sec)
 #define DEFAULT_EJERK                 5.0    // (mm/sec)
 
 
